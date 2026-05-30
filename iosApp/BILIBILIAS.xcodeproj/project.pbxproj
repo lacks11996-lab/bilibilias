@@ -156,7 +156,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \\\"YES\\\"\"\n  exit 0\nfi\ncd \"$SRCROOT/..\"\nCOMPOSE_IOS_RESOURCES_ARCHS=\"$ARCHS\"\nif [ \"$PLATFORM_NAME\" = \"iphonesimulator\" ] && echo \"$ARCHS\" | grep -q \"x86_64\"; then\n  COMPOSE_IOS_RESOURCES_ARCHS=\"arm64\"\nfi\n./gradlew :shared:embedAndSignAppleFrameworkForXcode -Pcompose.ios.resources.platform=\"$PLATFORM_NAME\" -Pcompose.ios.resources.archs=\"$COMPOSE_IOS_RESOURCES_ARCHS\"\n";
+			shellScript = "cd \"$SRCROOT/..\"\nCOMPOSE_IOS_RESOURCES_ARCHS=\"$ARCHS\"\nif [ \"$PLATFORM_NAME\" = \"iphonesimulator\" ] && echo \"$ARCHS\" | grep -q \"x86_64\"; then\n  COMPOSE_IOS_RESOURCES_ARCHS=\"arm64\"\nfi\n./gradlew :shared:embedAndSignAppleFrameworkForXcode -Pcompose.ios.resources.platform=\"$PLATFORM_NAME\" -Pcompose.ios.resources.archs=\"$COMPOSE_IOS_RESOURCES_ARCHS\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -225,7 +225,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -284,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
